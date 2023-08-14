@@ -22,7 +22,8 @@ function Calculator() {
 
   return (
     <div className="calculator">
-      <div className="display">{buffer || result}</div>
+      <div className="display">{buffer}</div>
+      <div className="result">{result}</div> {/* Added result screen */}
       <div className="buttons">
         {[1, 2, 3, "+", 4, 5, 6, "-", 7, 8, 9, "*", "C", 0, "=", "/"].map((value) => (
           <button key={value} onClick={() => handleButtonClick(value)}>
