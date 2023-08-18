@@ -1,70 +1,32 @@
-# Getting Started with Create React App
+# Welcome to My Reactjs Calculator
+***
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Task
+Create a ReactJS Application. It will be a single route application.
 
-## Available Scripts
+## Description
+No more than 1 components per file.
+Additionals components will be in src/components/ CSS will be in a file associated to the component: css for ExampleComponent.js will be in ExampleComponent.css. Your Readme will have to describe the project. On the css/colors/design, you can be creative. Your project will be hosted in the cloud (AWS/Gcloud/Azure/Netlify/...) and you write the url in my_reactjs_calculator_url.txt. Nothing more, just the URL.
 
-In the project directory, you can run:
 
-### `npm start`
+## Installation
+npm create-react-app .
+npm install react-router-dom@5.2.0
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:8080) to view it in your browser.
+## Usage
+import React from "react";
+import Calculator from "./Calculator";
+function App() {
+  return (
+    <div className="App">
+      <Calculator />
+    </div>
+  );
+}
+export default App;
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### The Core Team
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: https://my-reactjs-calculator-dshr-git-master-hayweezyana.vercel.app
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<span><i>Made at <a href='https://qwasar.io'>Qwasar SV -- Software Engineering School</a></i></span>
+<span><img alt='Qwasar SV -- Software Engineering School's Logo' src='https://storage.googleapis.com/qwasar-public/qwasar-logo_50x50.png' width='20px'></span>
