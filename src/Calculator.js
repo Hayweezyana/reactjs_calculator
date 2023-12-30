@@ -44,7 +44,7 @@ function Calculator() {
         <div className="result">{result}</div>
       </div>
       <div className="buttons">
-        {[1, 2, 3, "+", 4, 5, 6, "-", 7, 8, 9, "*", 0, "/", "=", "C", "CE", "sqrt", "pow"].map((value) => (
+        {[1, 2, 3, "+", 4, 5, 6, "-", 7, 8, 9, "*", 0, "÷", "=", "C", "CE", "√", "^"].map((value) => (
           <button key={value} onClick={() => handleButtonClick(value)}>
             {value}
           </button>
