@@ -51,7 +51,7 @@ function Calculator() {
         ))}
       </div>
       <div className="recent-calculations">
-        <h2>Recent Calculations</h2>
+        <h2>MEM</h2>
         <ul>
           {recentCalculations.map((calculation, index) => (
             <li key={index}>{`${calculation.expression} = ${calculation.result}`}</li>
