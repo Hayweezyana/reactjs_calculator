@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import "./Calculator.css";
+import * as math from "mathjs";
+import "./Calculator.css"; //
 
 function Calculator() {
   const [buffer, setBuffer] = useState("");
@@ -8,13 +9,19 @@ function Calculator() {
   const handleButtonClick = (value) => {
     if (value === "=") {
       try {
-        setResult(eval(buffer));
+        setResult(math.evaluate(buffer));
       } catch (error) {
         setResult("Error");
       }
     } else if (value === "C") {
       setBuffer("");
       setResult("");
+    } else if (value === "CE") {
+      setBuffer((prevBuffer) => prevBuffer.slice(0, -1)); // Clear the last entry
+    } else if (value === "sqrt") {
+      setResult(math.sqrt(math.evaluate(buffer)));
+    } else if (value === "pow") {
+      setBuffer((prevBuffer) => prevBuffer + "^");
     } else {
       setBuffer((prevBuffer) => prevBuffer + value);
     }
@@ -22,10 +29,12 @@ function Calculator() {
 
   return (
     <div className="calculator">
-      <div className="display">{buffer}</div>
-      <div className="result">{result}</div> {/* Added result screen */}
+      <div className="display">
+        <div className="buffer">{buffer}</div>
+        <div className="result">{result}</div>
+      </div>
       <div className="buttons">
-        {[1, 2, 3, "+", 4, 5, 6, "-", 7, 8, 9, "*", "C", 0, "=", "/"].map((value) => (
+        {[1, 2, 3, "+", 4, 5, 6, "-", 7, 8, 9, "*", 0, "/", "=", "C", "CE", "sqrt", "pow"].map((value) => (
           <button key={value} onClick={() => handleButtonClick(value)}>
             {value}
           </button>
