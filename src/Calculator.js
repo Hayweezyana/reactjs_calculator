@@ -1,15 +1,22 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import * as math from "mathjs";
-import "./Calculator.css"; //
+import "./Calculator.css"; // You can create a new CSS file for styling
 
 function Calculator() {
   const [buffer, setBuffer] = useState("");
   const [result, setResult] = useState("");
+  const [recentCalculations, setRecentCalculations] = useState([]);
 
   const handleButtonClick = (value) => {
     if (value === "=") {
       try {
-        setResult(math.evaluate(buffer));
+        const calculatedResult = math.evaluate(buffer);
+        setResult(calculatedResult);
+        // Add the recent calculation to the list
+        setRecentCalculations((prevCalculations) => [
+          { expression: buffer, result: calculatedResult },
+          ...prevCalculations,
+        ]);
       } catch (error) {
         setResult("Error");
       }
@@ -27,6 +34,9 @@ function Calculator() {
     }
   };
 
+  useEffect(() => {
+  }, [recentCalculations]);
+
   return (
     <div className="calculator">
       <div className="display">
@@ -39,6 +49,14 @@ function Calculator() {
             {value}
           </button>
         ))}
+      </div>
+      <div className="recent-calculations">
+        <h2>Recent Calculations</h2>
+        <ul>
+          {recentCalculations.map((calculation, index) => (
+            <li key={index}>{`${calculation.expression} = ${calculation.result}`}</li>
+          ))}
+        </ul>
       </div>
     </div>
   );
