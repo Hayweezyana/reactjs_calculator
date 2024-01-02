@@ -25,9 +25,9 @@ function Calculator() {
       setResult("");
     } else if (value === "CE") {
       setBuffer((prevBuffer) => prevBuffer.slice(0, -1)); // Clear the last entry
-    } else if (value === "sqrt") {
+    } else if (value === "√") {
       setResult(math.sqrt(math.evaluate(buffer)));
-    } else if (value === "pow") {
+    } else if (value === "^") {
       setBuffer((prevBuffer) => prevBuffer + "^");
     } else {
       setBuffer((prevBuffer) => prevBuffer + value);
@@ -51,7 +51,7 @@ function Calculator() {
         ))}
       </div>
       <div className="recent-calculations">
-        <h2> MEM </h2>
+        <h2> MEMORY </h2>
         <ul>
           {recentCalculations.map((calculation, index) => (
             <li key={index}>{`${calculation.expression} = ${calculation.result}`}</li>
