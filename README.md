@@ -1,32 +1,47 @@
-# Welcome to My Reactjs Calculator
-***
+# ReactJS Calculator
 
-## Task
-Create a ReactJS Application. It will be a single route application.
+Welcome to the ReactJS Calculator – a versatile and user-friendly web application designed for performing both basic and advanced mathematical operations. This project is built using React, providing a modern and responsive calculator experience.
 
-## Description
-No more than 1 components per file.
-Additionals components will be in src/components/ CSS will be in a file associated to the component: css for ExampleComponent.js will be in ExampleComponent.css. Your Readme will have to describe the project. On the css/colors/design, you can be creative. Your project will be hosted in the cloud (AWS/Gcloud/Azure/Netlify/...) and you write the url in my_reactjs_calculator_url.txt. Nothing more, just the URL.
+## Features
 
+- **User-Friendly Interface:** A clean and intuitive user interface for easy navigation.
+- **Basic and Scientific Calculations:** Perform standard operations and explore advanced mathematical functions.
+- **Memory and History:** Keep track of your recent calculations and reuse past results.
+- **Responsive Design:** Enjoy a seamless experience on desktops, tablets, and mobile devices.
 
-## Installation
-npm create-react-app .
-npm install react-router-dom@5.2.0
+## Getting Started
 
-## Usage
-import React from "react";
-import Calculator from "./Calculator";
-function App() {
-  return (
-    <div className="App">
-      <Calculator />
-    </div>
-  );
-}
-export default App;
+### Prerequisites
 
-### The Core Team
+Make sure you have Node.js and npm installed on your machine.
 
+### Installation
 
-<span><i>Made at <a href='https://qwasar.io'>Qwasar SV -- Software Engineering School</a></i></span>
-<span><img alt='Qwasar SV -- Software Engineering School's Logo' src='https://storage.googleapis.com/qwasar-public/qwasar-logo_50x50.png' width='20px'></span>
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/Hayweezyana/reactjs_calculator.git
+cd reactjs_calculator
+npm install
+npm start
+Deployment
+This project is configured for deployment with Vercel. Simply connect your GitHub repository to Vercel for automatic deployments on each push.
+
+Project Structure
+src/: Contains the source code for the ReactJS Calculator.
+public/: Includes public assets and the HTML template.
+Technology Stack
+ReactJS: A declarative and efficient JavaScript library for building user interfaces.
+Vercel: Cloud platform for hosting and deployment.
+Contributing
+We welcome contributions! If you'd like to contribute to the project, please follow our contribution guidelines.
+
+Issues and Feedback
+Found a bug or have a suggestion? Please open an issue.
+
+License
+This project is licensed under the MIT License.
+
+Acknowledgements
+Special thanks to the ReactJS community and the developers of supporting libraries.
+Happy calculating!
